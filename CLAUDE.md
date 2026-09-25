@@ -41,6 +41,22 @@ This file provides context for AI assistants (Cursor AI) working in this reposit
 - Throw or return errors with clear, actionable messages.
 - Do not swallow errors silently.
 
+### UI & Accessibility
+
+- Every form input must have a proper visible `<label>` tied via matching `for` and `id` attributes.
+- Inputs must be keyboard accessible with clear focus states (`:focus-visible`).
+- Use appropriate semantic input types (`text`, `email`, `tel`) and accessibility attributes (`aria-required`, `aria-invalid`, `aria-describedby`).
+- Error messages must clearly identify the relevant field and use live regions (`role="alert"` or `aria-live="polite"`).
+- Manage focus accessibility by moving focus to the first invalid field upon validation failure.
+
+### Testing & Verification
+
+- New functionality, validation rules, or API endpoints must have automated tests.
+- Write tests for both happy paths and edge cases (empty fields, invalid formats, boundary conditions).
+- Run tests (`npm test`) and the project build (`npm run build`) before declaring any feature complete.
+- Never claim verification passed without actually executing the verification commands and inspecting output.
+- Fix all test or build failures before completing the task.
+
 ## Conventional Commits
 
 All commit messages follow the [Conventional Commits](https://www.conventionalcommits.org/) specification:
@@ -109,6 +125,13 @@ ai-capstone/
 ## Working with Cursor AI
 
 - Read this file and `README.md` before making changes.
+- Inspect existing files, directories, and dependencies before making changes.
 - Match existing patterns in the codebase before introducing new ones.
-- Keep changes minimal and focused on the requested task.
+- Reuse existing components and utilities where possible.
+- Keep changes minimal and focused on the requested task — do not modify unrelated files.
+- Ensure form inputs have proper visible, accessible labels and ARIA attributes.
+- New functionality should have accompanying automated tests.
+- Run tests and the build before declaring a feature complete.
+- Do not claim verification passed without actually running it and checking the results.
 - Do not commit unless explicitly asked.
+
