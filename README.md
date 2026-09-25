@@ -18,7 +18,15 @@ cd ai-capstone
 ### Run
 
 ```bash
-node src/index.js
+npm start
+```
+
+Open [http://localhost:3000/settings](http://localhost:3000/settings) for the settings form (name, email, phone with validation).
+
+### Test
+
+```bash
+npm test
 ```
 
 ## Stack

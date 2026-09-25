@@ -1,0 +1,1 @@
+AI behavior noticed: In Round 1, I only asked for phone validation without specifying the required length. The AI chose to accept phone numbers between 7 and 15 digits. This was an assumption made by the AI rather than a requirement I provided

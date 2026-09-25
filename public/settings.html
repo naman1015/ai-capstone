@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Settings — AI Capstone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/settings.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true"></div>
+
+    <main class="page">
+      <header class="intro">
+        <p class="brand">AI Capstone</p>
+        <h1>Settings</h1>
+        <p class="lede">Keep your contact details current so we can reach you.</p>
+      </header>
+
+      <form id="settings-form" class="settings-form" novalidate>
+        <div class="field" data-field="name">
+          <label for="name">Full name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            placeholder="Jordan Lee"
+            maxlength="80"
+            required
+            aria-describedby="name-error"
+          />
+          <p id="name-error" class="error" role="alert" hidden></p>
+        </div>
+
+        <div class="field" data-field="email">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder="you@example.com"
+            maxlength="120"
+            required
+            aria-describedby="email-error"
+          />
+          <p id="email-error" class="error" role="alert" hidden></p>
+        </div>
+
+        <div class="field" data-field="phone">
+          <label for="phone">Phone</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            autocomplete="tel"
+            placeholder="+1 (555) 123-4567"
+            maxlength="20"
+            required
+            aria-describedby="phone-error"
+          />
+          <p id="phone-error" class="error" role="alert" hidden></p>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn-primary">Save settings</button>
+          <p id="form-status" class="status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </main>
+
+    <script src="/js/settings.js"></script>
+  </body>
+</html>
